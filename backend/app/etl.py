@@ -75,7 +75,7 @@ async def load_items(items: list[dict], session: AsyncSession) -> int:
         "lab-01") as the key into the dict you built above
       - Check if a task with this title and parent_id already exists
       - If not, INSERT a new ItemRecord(type="task", title=task_title,
-        parent_id=lab_item.id)
+        parent_id=lab_item.id) 
     - Commit after all inserts
     - Return the number of newly created items
     """
@@ -90,7 +90,7 @@ async def load_logs(
     Args:
         logs: Raw log dicts from the API (each has lab, task, student_id, etc.)
         items_catalog: Raw item dicts from fetch_items() — needed to map
-            short IDs (e.g. "lab-01", "setup") to item titles stored in the DB.
+            short IDs  (e.g. "lab-01", "setup") to item titles stored in the DB.
         session: Database session.
 
     TODO: Implement this function.
@@ -118,7 +118,7 @@ async def load_logs(
          - checks_passed = log["passed"]
          - checks_total = log["total"]
          - created_at = parsed log["submitted_at"]
-    - Commit after all inserts
+    - Commit after all insertss
     - Return the number of newly created interactions
     """
     raise NotImplementedError
